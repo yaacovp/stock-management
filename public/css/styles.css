@@ -1,1 +1,282 @@
+/* Styles globaux */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: #fafafa;
+}
 
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    align-items: center;
+    background-color: #00796b;
+    padding: 10px;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.nav-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav-links li {
+    margin-left: 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    color: #888;
+    padding: 10px;
+    margin-top: 30px;
+    border-top: 1px solid #ccc;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* === BOUTONS === */
+.btn, button {
+    display: inline-block;
+    text-align: center;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    min-width: 160px; /* Assure une largeur uniforme */
+    border: none;
+}
+
+/* Bouton principal */
+button, .btn-primary {
+    background: #00796b;
+    color: white;
+}
+
+button:hover, .btn-primary:hover {
+    background: #005f56;
+}
+
+/* Bouton Annuler */
+.btn-secondary, .btn-annule {
+    background-color: #d32f2f;
+    color: white;
+}
+
+.btn-secondary:hover, .btn-annule:hover {
+    background-color: #b71c1c;
+}
+
+/* Ajustement des boutons "Enregistrer" et "Annuler" */
+.form-buttons {
+    display: flex;
+    justify-content: left; /* Aligner les boutons à gauche */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+/* Réduction de la taille des boutons */
+button, .btn-secondary {
+    padding: 8px 12px; /* Diminue la hauteur et la largeur */
+    font-size: 14px; /* Réduit légèrement la taille du texte */
+    min-width: 120px; /* Diminue la largeur minimale */
+}
+
+/* === FORM & TABLE === */
+label {
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* TABLE */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-stock {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 20px;
+    min-width: 600px;
+}
+
+.table-stock th {
+    background: #f0f0f0;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-stock th,
+.table-stock td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Icônes de tri */
+.sortable {
+    display: inline-flex;
+    align-items: center;
+}
+
+.sortable span {
+    margin-left: 5px;
+    font-size: 12px;
+}
+
+.table-stock th:hover {
+    background: #e0e0e0;
+}
+
+.alert-row {
+    background: #ffd1d1;
+}
+
+/* === FILTRES === */
+.filter-form,
+.sejour-selector {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.filter-submit {
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
+}
+
+/* === BOUTONS DE CHOIX DE SÉJOUR === */
+.sejour-button {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    width: 200px;
+}
+
+.sejour-button img.sejour-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.sejour-buttons .btn {
+    text-align: center;
+    min-width: 150px;
+}
+
+/* === NAVIGATION === */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Bouton "Changer de séjour" */
+.btn-change-sejour {
+    background: #004d40;
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-change-sejour:hover {
+    background: #00695c;
+}
+
+/* === MEDIA QUERIES POUR MOBILE === */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-left,
+    .nav-right {
+        width: 100%;
+        justify-content: flex-start;
+        margin: 5px 0;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-links li {
+        margin-left: 0;
+        margin-bottom: 5px;
+    }
+    .table-stock {
+        font-size: 14px;
+        min-width: 450px;
+    }
+    .filter-form {
+        flex-direction: column;
+    }
+}

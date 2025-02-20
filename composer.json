@@ -1,1 +1,6 @@
 
+{
+    "name": "stock-management",
+    "description": "Gestion de stock",
+    "require": {}
+}
